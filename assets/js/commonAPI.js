@@ -1,4 +1,4 @@
-axios.defaults.baseURL = 'http://ajax.frontend.itheima.net'
+axios.defaults.baseURL = 'http://api-breakingnews-web.itheima.net'
     // 添加请求拦截器
 axios.interceptors.request.use(function(config) {
     // 在发送请求之前做些什么
@@ -8,7 +8,7 @@ axios.interceptors.request.use(function(config) {
     //判断发送请求之前是否有 /my开头的请求路径
     //如果有,手动添加 headers请求头
     if (config.url.startsWith('/my')) {
-        //headers 是即将被发送的自定义请求头
+        //headers 是即将被发送的自定义请求头   给全局请求添加token密钥
         config.headers.Authorization = token
     }
     return config;
