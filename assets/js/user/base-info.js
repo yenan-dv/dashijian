@@ -36,7 +36,7 @@ $(function() {
                 //更新用户信息
             window.parent.getUserInfo()
         })
-        //充值功能
+        //提交功能
     $('#rens').click(function(e) {
         e.preventDefault()
             //重新渲染用户信息
